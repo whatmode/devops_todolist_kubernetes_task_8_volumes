@@ -7,6 +7,6 @@ spec:
   volumeName: pv-data
   accessModes:
     - ReadWriteMany
-resources:
-  requests:
-    storage: 1Gi
+  resources:
+    requests:
+      storage: 1Gi
