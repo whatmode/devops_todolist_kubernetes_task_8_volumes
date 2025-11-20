@@ -1,5 +1,5 @@
 #!/bin/bash
-kubectl create cluster --config cluster.yml
+kind create cluster --config cluster.yml
 kubectl apply -f .infrastructure/namespace.yml
 kubectl apply -f .infrastructure/clusterIp.yml
 kubectl apply -f .infrastructure/nodePort.yml

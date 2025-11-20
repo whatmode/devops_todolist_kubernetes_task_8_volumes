@@ -36,7 +36,7 @@ spec:
         - name: SECRET_KEY
           valueFrom:
             secretKeyRef:
-              name: app-secret
+              name: app-secrets
               key: SECRET_KEY
         ports:
         - containerPort: 8080
@@ -50,7 +50,7 @@ spec:
           httpGet:
             path: api/ready
             port: 8080
-          initialDelaySeconds: 5
+          initialDelaySeconds: 15
           periodSeconds: 5
         volumeMounts:
           - name: app-config-volume
@@ -67,6 +67,6 @@ spec:
           configMap:
             name: app-config
         - name: app-secrets-volume
-          configMap:
-            name: app-secret
+          secret:
+            secretName: app-secrets
         
