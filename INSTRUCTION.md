@@ -8,9 +8,9 @@ kubectl port-forward pod/<app-pod-name> <local-port>:<clusterIP-target-port> -n 
 1. Run command:
 kubectl exec -it <app-pod-name> bash
 2. Run command:
-ls -la /configs
+ls -la /app/configs
 # To validate that secret data is mounted as files in the right order
 1. Run command:
 kubectl exec -it <app-pod-name> bash
 2. Run command:
-ls -la /secrets
+ls -la /app/secrets
