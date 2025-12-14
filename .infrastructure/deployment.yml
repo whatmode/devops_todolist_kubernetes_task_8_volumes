@@ -53,6 +53,8 @@ spec:
           initialDelaySeconds: 15
           periodSeconds: 5
         volumeMounts:
+          - name: data
+            mountPath: "/app/data"
           - name: app-config-volume
             mountPath: "/app/configs"
             readOnly: true
